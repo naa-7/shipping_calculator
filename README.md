@@ -1,1 +1,14 @@
 # shipping_calculator
+
+![img1](https://github.com/naa-7/shipping_calculator/blob/main/img1.png)
+![img2](https://github.com/naa-7/shipping_calculator/blob/main/img2.png)
+
+The idea of this project is to calculate the cost of different ways of shipping; ground shipping, premium shipping, drone shipping. 
+
+Also, the program can calculate the cheapest option of shipping. Zenity is used by the program prompting the user to input the weight
+
+and option of shipping in order to calculate the cost. Once the calculation is accomplished, then the result is displayed for the user on Zenity.
+
+### To run the program
+
+   $ python shipping_cost_calculator.py
