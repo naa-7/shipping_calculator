@@ -43,25 +43,12 @@ def cheapest_shipping(weight):
     return ("Cheapest option is premium shipping = \$" + str(premium))
 
 def main():
-    #ground_shipping, premium_shipping = ground_shipping(8.4)
-    #drone_shipping = drone_shipping(1.5)
-    #cheapest_shipping = cheapest_shipping(41.5)
-    #print("Ground shipping cost = $" + str(ground_shipping))
-    # should print "Ground shipping cost = $53.60"
-    #print("Premium shipping cost = $" + str(premium_shipping))
-    # should print "Premium shipping cost = $125.00"
-    #print("Drone shipping cost = $" + str(drone_shipping))
-    # should print "Drone shipping cost = $6.75"
-    #print("Cheapest shipping is " + str(cheapest_shipping))
-    # should print "Cheapest shipping is premium shipping = $125.00"
-
     answer = subprocess.Popen('zenity --forms --title="Shipping Calculator" --text="" --add-entry="Enter weight" --add-combo="Shipping Method"\
             --combo-values="Ground Shipping|Premium Shipping|Drone Shipping|Cheapest Shipping"', shell=True, stdout=subprocess.PIPE, universal_newlines=True)
-
     answer = answer.stdout.readline()
     answer = answer.strip()
     answer = answer.split('|')
-    weight = int(answer[0])
+    weight = float(answer[0])
     shipping_method =  answer[1]
 
     if shipping_method == "Ground Shipping" or shipping_method == "Premium Shipping":
@@ -80,7 +67,7 @@ def main():
         print("Error, Program Exit")
         return 1 
 
-    output = "echo " + output_price + '|' + ' zenity --width=230 --height=120 --title="Result" --text-info'
+    output = 'echo ' + output_price + ' | zenity --width=230 --height=120 --title="Result" --text-info'
     output = subprocess.call(output, shell=True)
 
 if __name__ == "__main__":
