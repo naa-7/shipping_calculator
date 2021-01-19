@@ -1,7 +1,8 @@
 # shipping_calculator
 
-![img1](https://github.com/naa-7/shipping_calculator/blob/main/img.png)
-![img2](https://github.com/naa-7/shipping_calculator/blob/main/img2.png)
+![img_1](https://github.com/naa-7/shipping_calculator/blob/main/img_1.png)
+![img_2](https://github.com/naa-7/shipping_calculator/blob/main/img_2.png)
+
 
 The idea of this project is to calculate the cost of different ways of shipping; ground shipping, premium shipping,
 
