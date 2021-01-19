@@ -55,7 +55,7 @@ def main():
     #print("Cheapest shipping is " + str(cheapest_shipping))
     # should print "Cheapest shipping is premium shipping = $125.00"
 
-    answer = subprocess.Popen('zenity --forms --add-entry="Enter weight" --add-combo="Shipping Method"\
+    answer = subprocess.Popen('zenity --forms --title="Shipping Calculator" --add-entry="Enter weight" --add-combo="Shipping Method"\
             --combo-values="Ground Shipping|Premium Shipping|Drone Shipping|Cheapest Shipping"', shell=True, stdout=subprocess.PIPE, universal_newlines=True)
 
     answer = answer.stdout.readline()
