@@ -36,11 +36,11 @@ def cheapest_shipping(weight):
   ground, premium = ground_shipping(weight)
   drone = drone_shipping(weight)
   if (ground < premium) and (ground <drone):
-    return ("Cheapest shipping is ground shipping = \$" + str(ground))
+    return ("Cheapest option is ground shipping = \$" + str(ground))
   elif (drone < premium) and (drone < ground):
-    return ("Cheapest shipping is drone shipping = \$" + str(drone))
+    return ("Cheapest option is drone shipping = \$" + str(drone))
   else:
-    return ("Cheapest shipping is premium shipping = \$" + str(premium))
+    return ("Cheapest option is premium shipping = \$" + str(premium))
 
 def main():
     #ground_shipping, premium_shipping = ground_shipping(8.4)
